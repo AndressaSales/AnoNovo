@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Borel&family=Carattere&family=Dancing+Script&family=Edu+SA+Beginner&family=Fasthand&family=Pacifico&family=Rubik+Doodle+Shadow&family=Rubik+Wet+Paint&family=Sacramento&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #800970;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #98cfd9 1px, transparent 1px), linear-gradient(to bottom, #98cfd9 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.box{
+    position: absolute;
+    cursor: pointer;
+}
+.box::before{
+    content: 'Bye bye';
+    position: absolute;
+    top: -0.75em;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 2rem;
+    transition: 1s;
+}
+.box:hover::before{
+    transform: translateX(-100px);
+    opacity: 0;
+    filter: blur(30px);
+}
+.box::after{
+    content: '🍾Feliz ano novo🍾';
+    position: absolute;
+    left: 0;
+    top: -0.75em;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 2rem;
+    transition: 1s;
+
+    transform: translateY(100px);
+    opacity: 0;
+    filter: blur(30px);
+}
+.box:hover::after{
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
+.box span{
+    display: inline-block;
+    color: #fff;
+    font-size: 10em;
+    font-weight: bold;
+    transition: 2s;
+    filter: blur(1px);
+}
+.box span:last-child{
+    color: #ff23c8;
+}
+.box:hover span:last-child{
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(30px);
+}
+.box:hover{
+    text-shadow: 0px 1px 20px #FFF;
+}
+.box span:nth-child(3)::after{
+    content: '4';
+    position: absolute;
+    color: rgb(69, 201, 119);
+    text-shadow: 0px 1px 20px #FFF;
+    transform: rotate(-45deg) translateY(200px);
+    opacity: 0;
+    filter: blur(30px);
+    transition: 2s;
+}
+.box:hover span:nth-child(3)::after{
+
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
